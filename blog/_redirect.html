@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>文章 | Holy make 吼莉行銷</title>
+<meta name="robots" content="noindex">
+<script>
+// 這個頁面讓所有 /blog/*.html 的請求都能找到文章
+// 從 URL 取得 slug 並交給 article.html 處理
+const slug = window.location.pathname.split('/').pop().replace('.html','');
+// article.html 會自己解析 slug
+</script>
+</head>
+<body>
+<!-- 重定向到 article.html -->
+<script src="../assets/data/site.js"></script>
+<script>
+// 直接 inline article 頁面的功能
+const slug2 = window.location.pathname.split('/').pop().replace('.html','');
+const articles = loadData('articles', SITE_DATA.articles);
+const article = articles.find(a => a.slug === slug2);
+if (article) {
+  // 動態建立完整頁面
+  document.title = article.title + ' | Holy make 吼莉行銷';
+  // 重定向到 article.html 並傳入 slug
+  window.location.replace('../blog/article.html#' + slug2);
+} else {
+  window.location.replace('../blog.html');
+}
+</script>
+</body>
+</html>

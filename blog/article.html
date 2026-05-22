@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<!-- SEO meta 由 JS 動態填入 -->
+<title id="pageTitle">文章 | Holy make 吼莉行銷</title>
+<meta id="metaDesc" name="description" content="">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Noto+Serif+TC:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--orange:#E07030;--brown:#A05828;--cream:#F5F0E8;--off-white:#FAF8F4;--dark:#2C1A0A;--mid:#6B4423}
+
+  /* 全域手機優化 */
+  html{-webkit-text-size-adjust:100%;overflow-x:hidden}
+  body{overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+  input,select,textarea{font-size:16px!important} /* 防止 iOS zoom */
+  button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+  img{max-width:100%;height:auto}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--off-white);color:var(--dark);font-family:'DM Sans','Noto Serif TC',sans-serif}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(250,248,244,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(160,88,40,.08);padding:0 24px}
+.nav-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-logo{text-decoration:none;font-size:18px;display:flex;align-items:baseline;gap:0;line-height:1}
+.nav-back{font-size:13px;color:var(--mid);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s}
+.nav-back:hover{color:var(--orange)}
+article{max-width:720px;margin:0 auto;padding:100px 24px 80px}
+.article-meta{display:flex;align-items:center;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+.article-cat{background:rgba(224,112,48,.1);color:var(--orange);font-size:12px;padding:4px 12px;border-radius:100px;letter-spacing:.08em}
+.article-date{font-size:12px;color:var(--mid);opacity:.6}
+.article-title{font-family:'Noto Serif TC',serif;font-size:clamp(22px,5vw,34px);font-weight:600;color:var(--dark);line-height:1.35;margin-bottom:20px}
+.article-divider{width:40px;height:2px;background:var(--orange);margin-bottom:32px}
+.article-content{font-size:16px;line-height:1.9;color:var(--mid)}
+.article-content h2{font-family:'Noto Serif TC',serif;font-size:20px;font-weight:600;color:var(--dark);margin:32px 0 14px}
+.article-content p{margin-bottom:16px}
+.article-content ol,.article-content ul{margin:16px 0 16px 24px}
+.article-content li{margin-bottom:8px}
+.article-content strong{color:var(--brown)}
+.tags-wrap{display:flex;gap:8px;flex-wrap:wrap;margin-top:40px;padding-top:24px;border-top:1px solid rgba(160,88,40,.12)}
+.tag{background:var(--cream);color:var(--mid);font-size:12px;padding:4px 12px;border-radius:100px}
+.related{max-width:720px;margin:0 auto;padding:0 24px 80px}
+.related h3{font-family:'Noto Serif TC',serif;font-size:18px;font-weight:600;color:var(--dark);margin-bottom:20px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.related-card{background:#fff;border-radius:14px;padding:20px;border:1px solid rgba(160,88,40,.1);text-decoration:none;transition:transform .2s}
+.related-card:hover{transform:translateY(-2px)}
+.related-cat{font-size:11px;color:var(--orange);letter-spacing:.1em;margin-bottom:8px;display:block}
+.related-title{font-family:'Noto Serif TC',serif;font-size:14px;font-weight:600;color:var(--dark);line-height:1.5}
+.cta-box{background:var(--cream);border-radius:20px;padding:32px;text-align:center;margin:48px 0 0;max-width:720px;margin:48px auto 0}
+.cta-box p{font-size:14px;color:var(--mid);margin-bottom:16px;line-height:1.7}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:#fff;padding:12px 28px;border-radius:100px;text-decoration:none;font-size:14px;font-weight:500;transition:all .2s}
+.cta-btn:hover{background:var(--brown)}
+.not-found{text-align:center;padding:120px 24px;color:var(--mid)}
+footer{text-align:center;padding:32px 24px 48px;font-size:11px;color:var(--mid);opacity:.5}
+footer a{color:var(--mid);text-decoration:none}
+
+/* ═══ RWD ═══ */
+@media(max-width:768px){
+  article{padding:88px 20px 64px}
+  .article-title{font-size:22px}
+  .article-content{font-size:15px}
+  .article-content h2{font-size:17px}
+  .related{padding:0 20px 64px}
+  .related-grid{grid-template-columns:1fr}
+  .cta-box{padding:24px 20px;margin:36px 0 0}
+  .cta-btn{width:100%;justify-content:center;padding:13px 24px}
+}
+@media(max-width:400px){
+  article{padding:82px 16px 56px}
+  .related{padding:0 16px 56px}
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo"><span style="font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:#E05A1A;letter-spacing:-.01em">Holy</span><span style="font-family:'DM Sans',sans-serif;font-style:normal;font-weight:800;color:#F5926A;letter-spacing:-.01em">make</span></a>
+    <a href="../blog.html" class="nav-back">
+      ← 所有文章
+    </a>
+  </div>
+</nav>
+
+<div id="articleContent"></div>
+
+<footer style="margin-top:40px">© 2025 Holy make 吼莉行銷 &nbsp;·&nbsp; <a href="../index.html">首頁</a></footer>
+
+<script id="siteData">
+// Holy make 吼莉行銷 - 網站共用資料 & 工具函數
+
+// ── 工具函數 ──────────────────────────────────────
+function saveData(key, data) {
+  try { localStorage.setItem('hm_' + key, JSON.stringify(data)); } catch(e) { console.warn('saveData error', e); }
+}
+
+function loadData(key, fallback) {
+  try {
+    const v = localStorage.getItem('hm_' + key);
+    return v ? JSON.parse(v) : fallback;
+  } catch(e) { return fallback; }
+}
+
+// ── 預設文章資料 ──────────────────────────────────
+const SITE_DATA = {
+  articles: [
+    {
+      id: 1,
+      title: "為什麼你的IG沒有流量？短影音才是2025年的解法",
+      excerpt: "很多小品牌花錢下廣告，卻忽略了最免費的流量來源——真實的短影音。本篇告訴你如何用日常生活吸引對的人。",
+      category: "短影音行銷",
+      tags: ["短影音", "IG行銷", "小商家"],
+      date: "2025-05-01",
+      slug: "why-no-ig-traffic",
+      content: "<p>你有沒有這樣的經驗？花了好幾個小時做了一張精美的 IG 貼圖，結果按讚不到 10 個人。</p><p>這不是你的問題，是策略的問題。</p><h2>為什麼圖片的觸及越來越低？</h2><p>IG 和 TikTok 的演算法在 2023 年後大幅改變，開始優先推送「短影音」給陌生人看。這代表什麼？<br>你的靜態貼文，大部分只有「已追蹤你的人」能看到。</p><p>但短影音（Reels）會主動推給還不認識你的人。這就是為什麼很多素人一夜爆紅的關鍵。</p><h2>那要拍什麼？</h2><p>最有效的短影音，不是精心設計的廣告，而是<strong>真實的日常片段</strong>——工作現場、一個你學到的知識點、一個真實發生的故事。</p><p>人們追蹤的是「人」，不是「品牌」。</p><h2>如何開始？</h2><p>你不需要專業設備。一支手機、好的光線、清楚的表達，就夠了。Holy make 吼莉行銷就是幫你做到這件事——<strong>把你的真實生活，變成吸引客戶的內容</strong>。</p>"
+    },
+    {
+      id: 2,
+      title: "一條龍短影音服務是什麼？給你看完整流程",
+      excerpt: "從腳本、拍攝、剪輯到上傳，我們全包。你只需要做你自己，其他交給我們。",
+      category: "服務介紹",
+      tags: ["服務流程", "短影音製作", "外包"],
+      date: "2025-04-20",
+      slug: "one-stop-short-video",
+      content: "<p>很多人問：「一條龍服務到底包含什麼？我還需要做什麼？」</p><p>答案很簡單：<strong>你只需要出現</strong>。</p><h2>完整流程</h2><ol><li><strong>品牌訪談</strong>：我們先聊聊你是誰、你的客戶是誰、你想傳達什麼</li><li><strong>腳本規劃</strong>：依據你的個性和品牌，設計適合你說的腳本</li><li><strong>實地拍攝</strong>：到你的工作場域或生活空間拍攝真實畫面</li><li><strong>後製剪輯</strong>：加字幕、配樂、調色，讓影片更吸睛</li><li><strong>上傳規劃</strong>：依最佳時機安排發布，並協助設定標籤</li></ol><h2>一個月能拍幾支？</h2><p>依方案不同，每月 4～15 支。我們建議<strong>每週至少 1 支</strong>，讓演算法記住你。</p>"
+    },
+    {
+      id: 3,
+      title: "個人品牌新手必看：從 0 開始建立你的社群影響力",
+      excerpt: "沒有粉絲基礎也沒關係。了解這 5 個關鍵步驟，讓你的品牌從零開始穩定成長。",
+      category: "個人品牌",
+      tags: ["個人品牌", "社群經營", "新手入門"],
+      date: "2025-04-05",
+      slug: "personal-brand-from-zero",
+      content: "<p>你不需要有 10 萬粉絲，才能讓品牌有價值。<strong>1000 個精準粉絲，比 10 萬路人更有影響力</strong>。</p><h2>步驟一：定義你的「唯一性」</h2><p>你跟別人有什麼不同？不一定是技術，可能是你的個性、你的背景、你的觀點。</p><h2>步驟二：選定一個平台，先做深</h2><p>不要同時經營 5 個平台。先在一個地方做出成績，再擴展。</p><h2>步驟三：持續輸出，建立信任</h2><p>社群不是廣告牆，是你與受眾的對話。定期分享你的知識、過程、甚至失敗。</p><h2>步驟四：讓內容找到人</h2><p>用對的 hashtag、對的時間發文、對的內容格式，讓演算法幫你推廣。</p><h2>步驟五：有一個「行動號召」</h2><p>每支影片都要讓觀眾知道下一步做什麼——加入 LINE、看更多影片、詢問服務。</p>"
+    }
+  ]
+};
+
+// ── 初始化：首次執行時寫入預設資料 ────────────────
+(function init() {
+  if (!localStorage.getItem('hm_articles')) {
+    saveData('articles', SITE_DATA.articles);
+  }
+})();
+
+</script>
+<script>
+// 從 URL 取得 slug
+function getSlug() {
+  const hash = window.location.hash.slice(1);
+  if (hash) return hash;
+  const path = window.location.pathname;
+  return path.split('/').pop().replace('.html', '');
+}
+
+function render() {
+  const slug = getSlug();
+  const articles = loadData('articles', SITE_DATA.articles);
+  const article = articles.find(a => a.slug === slug);
+  const container = document.getElementById('articleContent');
+
+  if (!article) {
+    container.innerHTML = `<div class="not-found">
+      <h2 style="font-family:'Noto Serif TC',serif;margin-bottom:12px">找不到此文章</h2>
+      <p><a href="../blog.html" style="color:var(--orange)">← 返回文章列表</a></p>
+    </div>`;
+    return;
+  }
+
+  // Update SEO
+  document.getElementById('pageTitle').textContent = `${article.title} | Holy make 吼莉行銷`;
+  document.getElementById('metaDesc').content = article.excerpt;
+  document.title = `${article.title} | Holy make 吼莉行銷`;
+
+  const related = articles.filter(a => a.id !== article.id && a.category === article.category).slice(0,3);
+  const relatedHtml = related.length ? `
+    <div class="related">
+      <h3>相關文章</h3>
+      <div class="related-grid">
+        ${related.map(r => `
+          <a href="${r.slug}.html" class="related-card">
+            <span class="related-cat">${r.category}</span>
+            <div class="related-title">${r.title}</div>
+          </a>
+        `).join('')}
+      </div>
+    </div>
+  ` : '';
+
+  const tagsHtml = (article.tags||[]).map(t => `<span class="tag">#${t}</span>`).join('');
+
+  container.innerHTML = `
+    <article>
+      <div class="article-meta">
+        <span class="article-cat">${article.category}</span>
+        <span class="article-date">${article.date}</span>
+      </div>
+      <h1 class="article-title">${article.title}</h1>
+      <div class="article-divider"></div>
+      <div class="article-content">${article.content}</div>
+      ${tagsHtml ? `<div class="tags-wrap">${tagsHtml}</div>` : ''}
+      <div class="cta-box" style="margin-top:48px">
+        <p>想讓短影音幫你的品牌說故事嗎？<br>和我們聊聊你的需求，第一次諮詢完全免費。</p>
+        <a href="https://line.me/R/ti/p/@holymake" target="_blank" rel="noopener" class="cta-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.07-.2c-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.19-1.82 6.98-3.02 8.38-3.61 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.4-.01.06-.01.24-.02.27z"/></svg>
+          加入 LINE@ 免費諮詢
+        </a>
+      </div>
+    </article>
+    ${relatedHtml}
+  `;
+}
+
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- SEO Meta Tags -->
+<title>Holy make 吼莉行銷 | 短影音一條龍製作・個人品牌經營</title>
+<meta name="description" content="Holy make 吼莉行銷，提供短影音腳本、拍攝、剪輯一條龍服務，幫助個人品牌與小商家透過真實影音吸引精準客戶。台灣短影音行銷首選。">
+<meta name="keywords" content="短影音製作,個人品牌,IG行銷,TikTok,Reels,小商家行銷,台灣短影音,一條龍拍攝">
+<meta property="og:title" content="Holy make 吼莉行銷 | 短影音一條龍製作">
+<meta property="og:description" content="最有力量的行銷，就是你的日常生活。腳本・拍攝・剪輯・字幕・配音，全程包辦。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://holymake.tw">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://holymake.tw">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Noto+Serif+TC:wght@400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --orange: #E07030;
+  --orange-lt: #F09050;
+  --brown: #A05828;
+  --sage: #8A9E88;
+  --yellow: #D4C080;
+  --cream: #F5F0E8;
+  --off-white: #FAF8F4;
+  --dark: #2C1A0A;
+  --mid: #6B4423;
+}
+
+  /* 全域手機優化 */
+  html{-webkit-text-size-adjust:100%;overflow-x:hidden}
+  body{overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+  input,select,textarea{font-size:16px!important} /* 防止 iOS zoom */
+  button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+  img{max-width:100%;height:auto}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--off-white);color:var(--dark);font-family:'DM Sans','Noto Serif TC',sans-serif;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(250,248,244,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(160,88,40,.08);padding:0 24px}
+.nav-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.nav-logo{text-decoration:none;font-size:18px;display:flex;align-items:baseline;gap:0;line-height:1}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-size:13px;color:var(--mid);text-decoration:none;letter-spacing:.06em;transition:color .2s}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{background:var(--orange);color:#fff;padding:7px 18px;border-radius:100px;font-size:13px;font-weight:500;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--brown)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:22px;height:2px;background:var(--mid);display:block;transition:.3s}
+
+/* HERO */
+.hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 24px 80px;position:relative;overflow:hidden;background:var(--off-white)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 80% 20%,rgba(224,112,48,.1) 0%,transparent 60%),radial-gradient(ellipse 50% 60% at 10% 80%,rgba(138,158,136,.08) 0%,transparent 55%);pointer-events:none}
+.hero-brand{animation:fadeUp .8s ease both;line-height:1.1}
+.hero-sub{font-size:clamp(12px,3vw,15px);color:var(--mid);letter-spacing:.18em;text-transform:uppercase;margin-top:6px;animation:fadeUp .9s .1s ease both}
+.hero-divider{width:40px;height:2px;background:var(--orange);margin:28px auto;animation:expandW .8s .3s ease both;transform-origin:left}
+.hero-tagline{font-family:'Noto Serif TC',serif;font-size:clamp(13px,3.5vw,17px);color:var(--mid);letter-spacing:.1em;text-align:center;max-width:320px;line-height:1.9;animation:fadeUp .9s .2s ease both}
+.hero-actions{display:flex;gap:12px;margin-top:36px;flex-wrap:wrap;justify-content:center;animation:fadeUp 1s .4s ease both}
+.btn-primary{background:var(--orange);color:#fff;padding:14px 32px;border-radius:100px;text-decoration:none;font-size:15px;font-weight:500;letter-spacing:.04em;transition:all .2s;box-shadow:0 6px 20px rgba(224,112,48,.28)}
+.btn-primary:hover{background:var(--brown);transform:translateY(-2px);box-shadow:0 10px 28px rgba(160,88,40,.32)}
+.btn-outline{color:var(--brown);padding:14px 28px;border-radius:100px;text-decoration:none;font-size:15px;font-weight:500;letter-spacing:.04em;border:1.5px solid var(--brown);transition:all .2s}
+.btn-outline:hover{background:var(--brown);color:#fff}
+.scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:.4;animation:fadeIn 1.2s 1.2s ease both}
+.scroll-hint span{font-size:9px;letter-spacing:.2em;color:var(--mid)}
+.scroll-arrow{width:14px;height:14px;border-right:1.5px solid var(--mid);border-bottom:1.5px solid var(--mid);transform:rotate(45deg);animation:bounce 1.6s infinite}
+
+/* SECTIONS */
+section.content-section{padding:72px 24px;max-width:860px;margin:0 auto}
+.section-label{font-family:'Playfair Display',serif;font-style:italic;font-size:12px;color:var(--orange);letter-spacing:.14em;margin-bottom:10px;opacity:.85}
+.section-title{font-family:'Noto Serif TC',serif;font-size:clamp(22px,5.5vw,30px);font-weight:600;line-height:1.3;color:var(--dark);margin-bottom:20px}
+.section-body{font-size:15px;line-height:1.9;color:var(--mid)}
+.bg-cream{background:var(--cream)}
+
+/* SERVICES GRID */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:32px}
+.service-card{background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(160,88,40,.1);position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),var(--orange-lt))}
+.service-num{font-family:'Playfair Display',serif;font-style:italic;font-size:42px;color:var(--orange);opacity:.12;position:absolute;top:10px;right:18px;line-height:1}
+.service-title{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:600;color:var(--dark);margin-bottom:8px}
+.service-desc{font-size:13px;line-height:1.75;color:var(--mid)}
+
+/* PRICING */
+.pricing-tabs{display:flex;gap:8px;margin-bottom:28px;flex-wrap:wrap}
+.tab{padding:8px 20px;border-radius:100px;font-size:13px;font-weight:500;cursor:pointer;border:1.5px solid transparent;transition:.2s}
+.tab.active{background:var(--orange);color:#fff}
+.tab:not(.active){border-color:rgba(160,88,40,.3);color:var(--brown)}
+.tab:not(.active):hover{border-color:var(--brown)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.plan-card{background:#fff;border-radius:16px;padding:22px 20px;margin-bottom:14px;border:1.5px solid transparent;position:relative}
+.plan-card.featured{border-color:var(--orange)}
+.plan-badge{position:absolute;top:-10px;right:16px;background:var(--orange);color:#fff;font-size:10px;letter-spacing:.08em;padding:3px 10px;border-radius:100px}
+.plan-name{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:600;color:var(--dark);margin-bottom:6px}
+.plan-price{font-size:24px;font-weight:500;color:var(--orange);margin-bottom:4px}
+.plan-price span{font-size:13px;color:var(--mid);font-weight:400}
+.plan-detail{font-size:13px;color:var(--mid);line-height:1.7;margin-top:8px}
+.plan-detail strong{color:var(--brown)}
+.coupon-box{background:var(--cream);border-radius:14px;padding:18px 20px;margin-bottom:28px;border-left:3px solid var(--orange)}
+.coupon-box p{font-size:13px;line-height:1.8;color:var(--mid)}
+.coupon-box strong{color:var(--brown)}
+
+/* BLOG */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-top:28px}
+.blog-card{background:#fff;border-radius:16px;padding:24px;border:1px solid rgba(160,88,40,.1);text-decoration:none;display:block;transition:transform .2s,box-shadow .2s}
+.blog-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(160,88,40,.12)}
+.blog-tag{font-size:11px;color:var(--orange);letter-spacing:.1em;font-weight:500;margin-bottom:10px;display:block}
+.blog-title{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:600;color:var(--dark);line-height:1.5;margin-bottom:10px}
+.blog-excerpt{font-size:13px;color:var(--mid);line-height:1.7}
+.blog-date{font-size:11px;color:var(--mid);opacity:.6;margin-top:14px;display:block}
+
+/* CTA SECTION */
+.cta-section{background:var(--cream);text-align:center;padding:72px 24px}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;font-family:'Noto Serif TC',serif;font-size:16px;font-weight:600;letter-spacing:.06em;padding:16px 36px;border-radius:100px;text-decoration:none;transition:all .2s;box-shadow:0 6px 20px rgba(224,112,48,.28);margin-top:24px}
+.cta-btn:hover{background:var(--brown);transform:translateY(-2px);box-shadow:0 10px 28px rgba(160,88,40,.32)}
+.cta-note{font-size:12px;color:var(--mid);margin-top:14px;opacity:.65;letter-spacing:.08em}
+
+/* LINE */
+.line-bar{background:linear-gradient(135deg,#06C755,#00A040);color:#fff;text-align:center;padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:12px}
+.line-bar a{color:#fff;font-size:14px;font-weight:500;text-decoration:none;letter-spacing:.06em}
+.line-bar a:hover{text-decoration:underline}
+
+/* FOOTER */
+footer{text-align:center;padding:32px 24px 48px;font-size:11px;color:var(--mid);opacity:.5;letter-spacing:.08em}
+footer a{color:var(--mid);text-decoration:none}
+
+/* WAVE */
+.wave-sep{width:100%;overflow:hidden;line-height:0}
+.wave-sep svg{display:block;width:100%}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:.4}}
+@keyframes expandW{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes bounce{0%,100%{transform:rotate(45deg) translate(0,0)}50%{transform:rotate(45deg) translate(3px,3px)}}
+
+/* MOBILE */
+@media(max-width:640px){
+  .nav-links{display:none;position:fixed;top:56px;left:0;right:0;background:var(--off-white);padding:20px 24px;flex-direction:column;gap:16px;border-bottom:1px solid rgba(160,88,40,.1)}
+  .nav-links.open{display:flex}
+  .hamburger{display:flex}
+  .nav-cta{display:none}
+}
+
+/* ═══ RWD - 手機版全面覆蓋 ═══ */
+@media(max-width:768px){
+  /* NAV */
+  .nav-links{
+    display:none;position:fixed;top:56px;left:0;right:0;
+    background:rgba(250,248,244,.98);backdrop-filter:blur(16px);
+    padding:16px 24px 24px;flex-direction:column;gap:0;
+    border-bottom:1px solid rgba(160,88,40,.12);
+    box-shadow:0 8px 24px rgba(44,26,10,.08);
+  }
+  .nav-links.open{display:flex}
+  .nav-links li{border-bottom:1px solid rgba(160,88,40,.08)}
+  .nav-links a{display:block;padding:13px 0;font-size:15px}
+  .hamburger{display:flex}
+  .nav-cta{display:none}
+
+  /* LINE BAR */
+  .line-bar{flex-direction:column;gap:6px;padding:10px 16px;font-size:12px}
+  .line-bar a{font-size:12px}
+
+  /* HERO */
+  .hero{padding:80px 20px 72px}
+  .hero-brand{font-size:52px}
+  .hero-tagline{font-size:15px;max-width:280px}
+  .hero-actions{flex-direction:column;align-items:center;gap:10px;width:100%}
+  .btn-primary,.btn-outline{width:100%;max-width:280px;text-align:center;padding:15px 24px}
+
+  /* SECTION */
+  section.content-section{padding:52px 20px}
+
+  /* SERVICES */
+  .services-grid{grid-template-columns:1fr;gap:14px}
+  .service-card{padding:20px 18px}
+
+  /* PRICING */
+  .pricing-tabs{gap:6px}
+  .tab{padding:7px 14px;font-size:12px}
+  .plan-card{padding:18px 16px}
+  .plan-price{font-size:20px}
+  .coupon-box{padding:14px 16px}
+
+  /* BLOG */
+  .blog-grid{grid-template-columns:1fr}
+  .blog-card{padding:20px 18px}
+
+  /* CTA */
+  .cta-section{padding:52px 20px}
+  .cta-btn{padding:14px 28px;font-size:15px;width:100%;max-width:280px;justify-content:center}
+  .section-title{font-size:24px}
+}
+
+@media(max-width:400px){
+  .hero-brand{font-size:42px}
+  .hero-sub{font-size:11px;letter-spacing:.12em}
+  nav{padding:0 16px}
+  section.content-section{padding:44px 16px}
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span style="font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:#E05A1A;letter-spacing:-.01em">Holy</span><span style="font-family:'DM Sans',sans-serif;font-style:normal;font-weight:800;color:#F5926A;letter-spacing:-.01em">make</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">服務</a></li>
+      <li><a href="#pricing">方案</a></li>
+      <li><a href="blog.html">文章</a></li>
+      <li><a href="#contact">聯絡</a></li>
+    </ul>
+    <a href="https://line.me/R/ti/p/@holymake" target="_blank" rel="noopener" class="nav-cta">加 LINE 詢問</a>
+    <div class="hamburger" onclick="toggleNav()" aria-label="選單">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- LINE 公告條 -->
+<div class="line-bar">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.07-.2c-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.19-1.82 6.98-3.02 8.38-3.61 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.4-.01.06-.01.24-.02.27z"/></svg>
+  <a href="https://line.me/R/ti/p/@holymake" target="_blank" rel="noopener">現在加入 LINE@ 免費諮詢短影音服務 →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" style="padding-top:80px">
+  <div class="hero-brand" style="font-size:clamp(44px,11vw,80px);line-height:1;letter-spacing:-.02em"><span style="font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:#E05A1A;letter-spacing:-.01em">Holy</span><span style="font-family:'DM Sans',sans-serif;font-style:normal;font-weight:800;color:#F5926A;letter-spacing:-.01em">make</span></div>
+  <div class="hero-sub">吼莉行銷</div>
+  <div class="hero-divider"></div>
+  <p class="hero-tagline">最有力量的行銷<br>就是你的日常生活</p>
+  <div class="hero-actions">
+    <a href="https://line.me/R/ti/p/@holymake" target="_blank" rel="noopener" class="btn-primary">
+      免費諮詢 →
+    </a>
+    <a href="#services" class="btn-outline">了解服務</a>
+  </div>
+  <div class="scroll-hint"><span>SCROLL</span><div class="scroll-arrow"></div></div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-sep"><svg viewBox="0 0 900 28" preserveAspectRatio="none" height="28"><path d="M0,14 C150,28 300,0 450,14 C600,28 750,0 900,14 L900,28 L0,28 Z" fill="#F5F0E8"/></svg></div>
+
+<!-- SERVICES -->
+<div class="bg-cream">
+<section class="content-section" id="services">
+  <p class="section-label reveal">What We Do</p>
+  <h2 class="section-title reveal">一條龍短影音<br>設計製作</h2>
+  <p class="section-body reveal">我們的角色不是包裝師，而是<strong style="color:var(--brown)">記錄者</strong>——幫你找到自己真實的表達方式，讓每一支影片都說出你的故事。</p>
+
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <span class="service-num">01</span>
+      <div class="service-title">腳本規劃</div>
+      <div class="service-desc">依據你的品牌個性設計腳本，說你最自然的語言，不做作不表演。</div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">02</span>
+      <div class="service-title">實地拍攝</div>
+      <div class="service-desc">到你的工作現場或生活空間，捕捉最真實的畫面與氛圍。</div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">03</span>
+      <div class="service-title">後製剪輯</div>
+      <div class="service-desc">字幕、配音、配樂、調色一手包辦，讓影片更吸睛更有溫度。</div>
+    </div>
+    <div class="service-card reveal">
+      <span class="service-num">04</span>
+      <div class="service-title">上傳規劃</div>
+      <div class="service-desc">依最佳時機安排發布，協助設定標籤，讓對的人看見你。</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- WAVE -->
+<div class="wave-sep" style="transform:scaleY(-1) scaleX(-1)"><svg viewBox="0 0 900 28" preserveAspectRatio="none" height="28"><path d="M0,14 C150,28 300,0 450,14 C600,28 750,0 900,14 L900,28 L0,28 Z" fill="#F5F0E8"/></svg></div>
+
+<!-- PRICING -->
+<section class="content-section" id="pricing">
+  <p class="section-label reveal">Our Plans</p>
+  <h2 class="section-title reveal">服務方案</h2>
+
+  <div class="coupon-box reveal">
+    <p>我們用 <strong>酷碰卷</strong> 換購影片。1 張酷碰卷 ＝ 1 支影片 ＝ <strong>$5,000</strong><br>
+    一次最少使用 <strong>4 張</strong>・每張有效期限半年</p>
+  </div>
+
+  <div class="pricing-tabs reveal">
+    <div class="tab active" onclick="switchTab('video')">📹 影片製作</div>
+    <div class="tab" onclick="switchTab('course')">📚 課程方案</div>
+  </div>
+
+  <div class="tab-content active" id="tab-video">
+    <div class="plan-card reveal">
+      <div class="plan-name">試拍方案</div>
+      <div class="plan-price">$20,000 <span>/ 4 支影片</span></div>
+      <div class="plan-detail">使用 <strong>4 張</strong>酷碰卷・單支約 $5,000</div>
+    </div>
+    <div class="plan-card featured reveal">
+      <span class="plan-badge">最受歡迎</span>
+      <div class="plan-name">成長方案</div>
+      <div class="plan-price">$35,000 <span>/ 7 送 3 = 10 支影片</span></div>
+      <div class="plan-detail">單支約 <strong>$3,500</strong></div>
+    </div>
+    <div class="plan-card reveal">
+      <div class="plan-name">品牌方案</div>
+      <div class="plan-price">$50,000 <span>/ 10 送 5 = 15 支影片</span></div>
+      <div class="plan-detail">單支約 <strong>$3,300</strong></div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="tab-course">
+    <div class="plan-card reveal">
+      <div class="plan-name">基礎建構 3 堂課</div>
+      <div class="plan-price">$18,000 <span>/ 3 堂</span></div>
+      <div class="plan-detail">一堂 <strong>$6,000</strong>・三堂 $18,000・<strong>可分期支付</strong><br>社群定位・內容策略・品牌形象全套建立</div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave-sep"><svg viewBox="0 0 900 28" preserveAspectRatio="none" height="28"><path d="M0,14 C150,28 300,0 450,14 C600,28 750,0 900,14 L900,28 L0,28 Z" fill="#F5F0E8"/></svg></div>
+
+<!-- BLOG -->
+<div class="bg-cream">
+<section class="content-section" id="blog">
+  <p class="section-label reveal">Knowledge</p>
+  <h2 class="section-title reveal">行銷知識文章</h2>
+  <p class="section-body reveal" style="margin-bottom:0">分享短影音、個人品牌、社群行銷的實用知識。</p>
+
+  <div class="blog-grid" id="blogGrid">
+    <!-- 由 JS 動態產生 -->
+  </div>
+
+  <div style="text-align:center;margin-top:32px">
+    <a href="blog.html" class="btn-outline reveal" style="display:inline-block">看所有文章 →</a>
+  </div>
+</section>
+</div>
+
+<!-- WAVE -->
+<div class="wave-sep" style="transform:scaleY(-1) scaleX(-1)"><svg viewBox="0 0 900 28" preserveAspectRatio="none" height="28"><path d="M0,14 C150,28 300,0 450,14 C600,28 750,0 900,14 L900,28 L0,28 Z" fill="#F5F0E8"/></svg></div>
+
+<!-- CTA -->
+<section class="cta-section" id="contact">
+  <p class="section-label reveal" style="text-align:center">Get In Touch</p>
+  <h2 class="section-title reveal" style="text-align:center">準備好讓影片說你的故事了嗎？</h2>
+  <p class="section-body reveal" style="text-align:center">不強迫・不包裝・只是幫你把真實的自己，讓對的人看見。</p>
+  <div>
+    <a href="https://line.me/R/ti/p/@holymake" target="_blank" rel="noopener" class="cta-btn reveal">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.07-.2c-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.67-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.25.38-.51 1.07-.78 4.19-1.82 6.98-3.02 8.38-3.61 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.4-.01.06-.01.24-.02.27z"/></svg>
+      加入 LINE@ 開始諮詢
+    </a>
+    <p class="cta-note reveal">流動・真實・自然・一條龍</p>
+  </div>
+</section>
+
+<footer>
+  © 2025 Holy make 吼莉行銷 &nbsp;·&nbsp; 
+  <a href="blog.html">文章</a> &nbsp;·&nbsp; 
+  <a href="admin/index.html">後台</a>
+</footer>
+
+<script id="siteData">
+// Holy make 吼莉行銷 - 網站共用資料 & 工具函數
+
+// ── 工具函數 ──────────────────────────────────────
+function saveData(key, data) {
+  try { localStorage.setItem('hm_' + key, JSON.stringify(data)); } catch(e) { console.warn('saveData error', e); }
+}
+
+function loadData(key, fallback) {
+  try {
+    const v = localStorage.getItem('hm_' + key);
+    return v ? JSON.parse(v) : fallback;
+  } catch(e) { return fallback; }
+}
+
+// ── 預設文章資料 ──────────────────────────────────
+const SITE_DATA = {
+  articles: [
+    {
+      id: 1,
+      title: "為什麼你的IG沒有流量？短影音才是2025年的解法",
+      excerpt: "很多小品牌花錢下廣告，卻忽略了最免費的流量來源——真實的短影音。本篇告訴你如何用日常生活吸引對的人。",
+      category: "短影音行銷",
+      tags: ["短影音", "IG行銷", "小商家"],
+      date: "2025-05-01",
+      slug: "why-no-ig-traffic",
+      content: "<p>你有沒有這樣的經驗？花了好幾個小時做了一張精美的 IG 貼圖，結果按讚不到 10 個人。</p><p>這不是你的問題，是策略的問題。</p><h2>為什麼圖片的觸及越來越低？</h2><p>IG 和 TikTok 的演算法在 2023 年後大幅改變，開始優先推送「短影音」給陌生人看。這代表什麼？<br>你的靜態貼文，大部分只有「已追蹤你的人」能看到。</p><p>但短影音（Reels）會主動推給還不認識你的人。這就是為什麼很多素人一夜爆紅的關鍵。</p><h2>那要拍什麼？</h2><p>最有效的短影音，不是精心設計的廣告，而是<strong>真實的日常片段</strong>——工作現場、一個你學到的知識點、一個真實發生的故事。</p><p>人們追蹤的是「人」，不是「品牌」。</p><h2>如何開始？</h2><p>你不需要專業設備。一支手機、好的光線、清楚的表達，就夠了。Holy make 吼莉行銷就是幫你做到這件事——<strong>把你的真實生活，變成吸引客戶的內容</strong>。</p>"
+    },
+    {
+      id: 2,
+      title: "一條龍短影音服務是什麼？給你看完整流程",
+      excerpt: "從腳本、拍攝、剪輯到上傳，我們全包。你只需要做你自己，其他交給我們。",
+      category: "服務介紹",
+      tags: ["服務流程", "短影音製作", "外包"],
+      date: "2025-04-20",
+      slug: "one-stop-short-video",
+      content: "<p>很多人問：「一條龍服務到底包含什麼？我還需要做什麼？」</p><p>答案很簡單：<strong>你只需要出現</strong>。</p><h2>完整流程</h2><ol><li><strong>品牌訪談</strong>：我們先聊聊你是誰、你的客戶是誰、你想傳達什麼</li><li><strong>腳本規劃</strong>：依據你的個性和品牌，設計適合你說的腳本</li><li><strong>實地拍攝</strong>：到你的工作場域或生活空間拍攝真實畫面</li><li><strong>後製剪輯</strong>：加字幕、配樂、調色，讓影片更吸睛</li><li><strong>上傳規劃</strong>：依最佳時機安排發布，並協助設定標籤</li></ol><h2>一個月能拍幾支？</h2><p>依方案不同，每月 4～15 支。我們建議<strong>每週至少 1 支</strong>，讓演算法記住你。</p>"
+    },
+    {
+      id: 3,
+      title: "個人品牌新手必看：從 0 開始建立你的社群影響力",
+      excerpt: "沒有粉絲基礎也沒關係。了解這 5 個關鍵步驟，讓你的品牌從零開始穩定成長。",
+      category: "個人品牌",
+      tags: ["個人品牌", "社群經營", "新手入門"],
+      date: "2025-04-05",
+      slug: "personal-brand-from-zero",
+      content: "<p>你不需要有 10 萬粉絲，才能讓品牌有價值。<strong>1000 個精準粉絲，比 10 萬路人更有影響力</strong>。</p><h2>步驟一：定義你的「唯一性」</h2><p>你跟別人有什麼不同？不一定是技術，可能是你的個性、你的背景、你的觀點。</p><h2>步驟二：選定一個平台，先做深</h2><p>不要同時經營 5 個平台。先在一個地方做出成績，再擴展。</p><h2>步驟三：持續輸出，建立信任</h2><p>社群不是廣告牆，是你與受眾的對話。定期分享你的知識、過程、甚至失敗。</p><h2>步驟四：讓內容找到人</h2><p>用對的 hashtag、對的時間發文、對的內容格式，讓演算法幫你推廣。</p><h2>步驟五：有一個「行動號召」</h2><p>每支影片都要讓觀眾知道下一步做什麼——加入 LINE、看更多影片、詢問服務。</p>"
+    }
+  ]
+};
+
+// ── 初始化：首次執行時寫入預設資料 ────────────────
+(function init() {
+  if (!localStorage.getItem('hm_articles')) {
+    saveData('articles', SITE_DATA.articles);
+  }
+})();
+
+</script>
+<script>
+// NAV
+function toggleNav(){
+  const nav = document.getElementById('navLinks');
+  nav.classList.toggle('open');
+}
+// 點選單項目後關閉
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('#navLinks a').forEach(a=>{
+    a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open'));
+  });
+  // 點外面關閉
+  document.addEventListener('click',function(e){
+    const nav=document.getElementById('navLinks');
+    const ham=document.querySelector('.hamburger');
+    if(!nav.contains(e.target)&&!ham.contains(e.target)){
+      nav.classList.remove('open');
+    }
+  });
+});
+
+// PRICING TABS
+function switchTab(tab) {
+  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', (tab==='video'?0:1)===i));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-'+tab).classList.add('active');
+}
+
+// BLOG PREVIEW (最新3篇)
+function renderBlog() {
+  const articles = loadData('articles', SITE_DATA.articles);
+  const grid = document.getElementById('blogGrid');
+  if (!grid) return;
+  const recent = articles.slice(0,3);
+  grid.innerHTML = recent.map(a => `
+    <a href="blog/article.html#${a.slug}" class="blog-card reveal">
+      <span class="blog-tag">${a.category}</span>
+      <div class="blog-title">${a.title}</div>
+      <div class="blog-excerpt">${a.excerpt}</div>
+      <span class="blog-date">${a.date}</span>
+    </a>
+  `).join('');
+  // re-observe new elements
+  document.querySelectorAll('.blog-card').forEach(el => io.observe(el));
+}
+
+// SCROLL REVEAL
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} });
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+renderBlog();
+</script>
+</body>
+</html>
