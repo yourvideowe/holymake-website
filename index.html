@@ -217,7 +217,7 @@ footer a{color:var(--mid);text-decoration:none}
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><span style="font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:#E05A1A;letter-spacing:-.01em">Holy</span><span style="font-family:'DM Sans',sans-serif;font-style:normal;font-weight:800;color:#F5926A;letter-spacing:-.01em">make</span></a>
+    <a href="index.html" class="nav-logo"><img src="assets/logo.jpg" alt="Holy make 吼莉行銷" style="height:36px;width:auto;display:block;object-fit:contain"></a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#services">服務</a></li>
       <li><a href="#pricing">方案</a></li>
@@ -239,8 +239,7 @@ footer a{color:var(--mid);text-decoration:none}
 
 <!-- HERO -->
 <section class="hero" style="padding-top:80px">
-  <div class="hero-brand" style="font-size:clamp(44px,11vw,80px);line-height:1;letter-spacing:-.02em"><span style="font-family:'Playfair Display',serif;font-style:italic;font-weight:700;color:#E05A1A;letter-spacing:-.01em">Holy</span><span style="font-family:'DM Sans',sans-serif;font-style:normal;font-weight:800;color:#F5926A;letter-spacing:-.01em">make</span></div>
-  <div class="hero-sub">吼莉行銷</div>
+  <div class="hero-brand"><img src="assets/logo.jpg" alt="Holy make 吼莉行銷" style="width:clamp(240px,60vw,420px);height:auto;display:block;object-fit:contain"></div>
   <div class="hero-divider"></div>
   <p class="hero-tagline">最有力量的行銷<br>就是你的日常生活</p>
   <div class="hero-actions">
@@ -295,41 +294,42 @@ footer a{color:var(--mid);text-decoration:none}
   <p class="section-label reveal">Our Plans</p>
   <h2 class="section-title reveal">服務方案</h2>
 
-  <div class="coupon-box reveal">
-    <p>我們用 <strong>酷碰卷</strong> 換購影片。1 張酷碰卷 ＝ 1 支影片 ＝ <strong>$5,000</strong><br>
-    一次最少使用 <strong>4 張</strong>・每張有效期限半年</p>
-  </div>
+  <div class="plan-cards-wrap reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:12px">
 
-  <div class="pricing-tabs reveal">
-    <div class="tab active" onclick="switchTab('video')">📹 影片製作</div>
-    <div class="tab" onclick="switchTab('course')">📚 課程方案</div>
-  </div>
-
-  <div class="tab-content active" id="tab-video">
     <div class="plan-card reveal">
-      <div class="plan-name">試拍方案</div>
-      <div class="plan-price">$20,000 <span>/ 4 支影片</span></div>
-      <div class="plan-detail">使用 <strong>4 張</strong>酷碰卷・單支約 $5,000</div>
+      <div class="plan-name">方案一｜試拍方案</div>
+      <div class="plan-price">$10,000 <span>/ 2 支影片</span></div>
+      <ul class="plan-list" style="margin-top:14px;padding-left:0;list-style:none;font-size:13px;color:var(--mid);line-height:2">
+        <li>✦ 後製剪輯</li>
+      </ul>
+      <div class="plan-note" style="margin-top:12px;font-size:12px;color:#B07050">適合初次嘗試、了解服務品質</div>
     </div>
+
     <div class="plan-card featured reveal">
       <span class="plan-badge">最受歡迎</span>
-      <div class="plan-name">成長方案</div>
-      <div class="plan-price">$35,000 <span>/ 7 送 3 = 10 支影片</span></div>
-      <div class="plan-detail">單支約 <strong>$3,500</strong></div>
+      <div class="plan-name">方案二｜經營方案</div>
+      <div class="plan-price">$35,000 <span>/ 7 送 3 = 10 支</span></div>
+      <ul class="plan-list" style="margin-top:14px;padding-left:0;list-style:none;font-size:13px;color:var(--mid);line-height:2">
+        <li>✦ 人設定位分析</li>
+        <li>✦ 系列主題規劃</li>
+        <li>✦ 影片腳本規劃</li>
+        <li>✦ 內容類型測試</li>
+        <li>✦ 後製剪輯</li>
+      </ul>
     </div>
-    <div class="plan-card reveal">
-      <div class="plan-name">品牌方案</div>
-      <div class="plan-price">$50,000 <span>/ 10 送 5 = 15 支影片</span></div>
-      <div class="plan-detail">單支約 <strong>$3,300</strong></div>
-    </div>
-  </div>
 
-  <div class="tab-content" id="tab-course">
     <div class="plan-card reveal">
-      <div class="plan-name">基礎建構 3 堂課</div>
-      <div class="plan-price">$18,000 <span>/ 3 堂</span></div>
-      <div class="plan-detail">一堂 <strong>$6,000</strong>・三堂 $18,000・<strong>可分期支付</strong><br>社群定位・內容策略・品牌形象全套建立</div>
+      <div class="plan-name">方案三｜品牌方案</div>
+      <div class="plan-price">$50,000 <span>/ 10 送 5 = 15 支</span></div>
+      <ul class="plan-list" style="margin-top:14px;padding-left:0;list-style:none;font-size:13px;color:var(--mid);line-height:2">
+        <li>✦ 人設定位分析</li>
+        <li>✦ 系列主題規劃</li>
+        <li>✦ 影片腳本規劃</li>
+        <li>✦ 內容類型測試</li>
+        <li>✦ 後製剪輯</li>
+      </ul>
     </div>
+
   </div>
 </section>
 
